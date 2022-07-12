@@ -1,0 +1,138 @@
+.dt {
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.logo {
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 1%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid black;
+}
+
+header li {
+  list-style: none;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+header ul {
+  margin: 1%;
+}
+
+header .first-menu,
+header .second-menu {
+  border-right: 2px solid black;
+}
+
+.menu-items {
+  display: flex;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid black;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  width: 5em;
+}
+
+table tr:nth-child(odd) {
+  background-color: rgba(5, 5, 5, 0.116);
+}
+
+.addnew,
+.mybooks {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+input[type='text'] {
+  border: 2px solid black;
+  padding: 3%;
+}
+
+.btn {
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+button {
+  width: 8em;
+  padding: 5px;
+}
+
+h1 {
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  right: 0.8%;
+  width: 96%;
+  bottom: 0;
+  padding: 1%;
+  border: 2px solid black;
+  margin-bottom: 1%;
+}
+
+.list-section {
+  display: block;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.add-section,
+.addnew {
+  display: none;
+}
+
+.contact-section {
+  display: none;
+}
+
+#form {
+  margin: 0 auto;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 50%;
+}
