@@ -1,11 +1,16 @@
-/* eslint-disable max-classes-per-file */
-/* eslint-disable import/extensions */
-
 import Books from './modules/books.js';
+import menuSection from './modules/menu.js';
+import { DateTime } from './modules/luxon.js';
+
+menuSection.MenuItems();
+const time = document.querySelector('.time');
+const currentTime = DateTime.now();
+time.innerHTML = `${currentTime.toJSDate()};`;
 
 const formTitle = document.querySelector('#title');
 const formAuthor = document.querySelector('#author');
 const library = new Books(formTitle, formAuthor);
+
 document.getElementById('form').addEventListener('submit', (e) => {
   e.preventDefault();
   library.addbook();
@@ -20,32 +25,3 @@ document.querySelectorAll('#delete').forEach((button, id) => {
     Books.retrieve();
   });
 });
-
-const app = {
-  pages: [],
-  show: new Event('show'),
-  init() {
-    app.pages = document.querySelectorAll('.page');
-    app.pages.forEach((pg) => {
-      pg.addEventListener('show', app.pageShown);
-    });
-
-    document.querySelectorAll('.nav-link').forEach((link) => {
-      link.addEventListener('click', app.nav);
-    });
-  },
-  nav(ev) {
-    ev.preventDefault();
-    const currentPage = ev.target.getAttribute('data-target');
-    document.querySelector('.active').classList.remove('active');
-    document.getElementById(currentPage).classList.add('active');
-  },
-};
-
-document.addEventListener('DOMContentLoaded', app.init);
-function startDate() {
-  const d = new Date();
-  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  document.getElementById('date').innerHTML = `${months[d.getMonth()]} ${d.getDay()} ${d.getFullYear()}, ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
-}
-startDate();
